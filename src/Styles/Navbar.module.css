@@ -30,7 +30,6 @@
 }
 
 .category:hover{
-    border-bottom: 3px solid rgb(255,165,0);
     color: rgb(255,165,0);
 }
 
@@ -42,7 +41,7 @@
     width: fit-content;
     height: 1.5rem;
     font-weight: bold;
-    background-color: rgb(255,165,0);
+    background-color: rgb(197, 192, 192);
     color: black;
     cursor: pointer;
 }

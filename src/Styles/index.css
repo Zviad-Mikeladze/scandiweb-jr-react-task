@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Merriweather', sans-serif;
+}
+
+body{
+  background-color: white;
+  color: black;
+  padding-bottom: 50px;
+}
+
+button{
+  cursor: pointer;
+  transition: ease-in-out 80ms;
+}
+
+button:hover{
+  transform: scale(1.05);
+}
+
+button:active{
+  transform: scale(1);
+}
