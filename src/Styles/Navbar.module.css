@@ -1,0 +1,72 @@
+@import url("./index.css");
+
+.navbar {
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(197, 192, 192);
+    color: black;
+    padding: 10px 10%;
+    box-shadow: 0px 5px 10px rgba(179, 177, 177, 0.5);
+    z-index: 1000;
+}
+
+
+.categories {
+    display: flex;
+    justify-content: left ;
+}
+
+.category{
+    text-align: left;
+    margin: 0 20px;
+    font-size: 1.5em;
+    padding: 15px 0px;
+    cursor: pointer;
+}
+
+.category:hover{
+    border-bottom: 3px solid rgb(255,165,0);
+    color: rgb(255,165,0);
+}
+
+.currency {
+    justify-items: right;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 10px;
+    width: fit-content;
+    height: 1.5rem;
+    font-weight: bold;
+    background-color: rgb(255,165,0);
+    color: black;
+    cursor: pointer;
+}
+
+.misc button {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    padding: 5px;
+    margin: auto 20px;
+    background-color: white;
+    border: none;
+    border-radius: 20%;
+    background-position: center;
+    cursor: pointer;
+}
+
+.badge{
+    position: absolute;
+    top: 60%;
+    right: -8%;
+    padding: 8px;
+    border-radius: 25%;
+    background-color: rgb(255,165,0);
+    color: white;
+    font-weight: 1000;
+}
