@@ -15,7 +15,7 @@
 
 .container:hover{
     transform: scale(1.02);
-    z-index: 5;
+    z-index: 6;
     box-shadow: 0 0 10px rgba(233, 9, 9, 0.25);
 }
 
