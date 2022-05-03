@@ -51,13 +51,6 @@ class Product extends Component {
               {currentCurrencyPrice.currency.symbol}
               {currentCurrencyPrice.amount}
             </h5>
-            
-
-
-            <hr />
-
-           
-
         </div>
         
       </div>
