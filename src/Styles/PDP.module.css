@@ -17,6 +17,7 @@
 .productInfo{
     display: flex;
     flex-direction: column;
+    width: 60%;
    
 }
 
@@ -34,4 +35,9 @@
     border-radius: 10px;
     box-shadow: 3px 3px 2px rgb(255,165,0);
     cursor: pointer;
+}
+hr{
+    border-top: 1px solid rgb(255,165,0);
+    margin: 20 px auto;
+    width: 100%;
 }

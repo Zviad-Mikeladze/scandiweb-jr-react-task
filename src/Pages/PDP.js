@@ -75,11 +75,11 @@ class ProductDetails extends Component {
                     <h1>{data.product.name}</h1>
                     <h2>Price: {currentCurrencyPrice.currency.symbol}{currentCurrencyPrice.amount}</h2>  
                     
-                    <hr style={{margin:"20px auto", width:"100%"}}/>
+                    <hr />
 
                     <ProductOptions data={data.product} />
                                       
-                    <hr style={{margin:"20px auto", width:"100%"}}/>
+                    <hr />
                     
                    <h3 ><b> Brand: {data.product.brand}</b></h3>
                    <div style={{paddingBottom:"10px" ,paddingTop:"10px", fontSize:"20px"}}> <h5>Product Description:</h5></div>
