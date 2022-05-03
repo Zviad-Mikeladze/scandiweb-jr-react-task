@@ -103,9 +103,6 @@ const rootReducer = (state = initialState, action) => {
         }
     }
 
-    
-
-    //forgetting this next line made me almost quit the task :)
     else return state
 
 

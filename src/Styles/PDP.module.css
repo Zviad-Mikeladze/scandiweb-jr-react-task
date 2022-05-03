@@ -17,7 +17,7 @@
 .productInfo{
     display: flex;
     flex-direction: column;
-    width: clamp(40%, 400px, 100%)
+   
 }
 
 .productInfo h1{
@@ -32,27 +32,6 @@
 .productImages img{
     margin: 10px;
     border-radius: 10px;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.35);
+    box-shadow: 3px 3px 2px rgb(255,165,0);
     cursor: pointer;
-}
-
-.addtoCart{
-    margin: 20px auto;
-    width: 80%;
-    height: 40px;
-    background-color: white;
-    color: rgb(228, 42, 42);
-    font-weight: 800;
-    font-size: 1.5rem;
-    border: none;
-    cursor: pointer;
-    transition: ease-in-out 150ms;
-}
-.addtoCart:hover{
-    opacity: 1;
-    background-color: gray;
-    border: 2px solid black;
-}
-.addtoCart:active{
-    transform: scale(0.95);
 }

@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import ProductOptions from '../Components/ProductOptions'
-import styles from "../Styles/ProductDetails.module.css"
-
+import styles from "../Styles/PDP.module.css"
 import { gql } from "@apollo/client"
-
 import { Query } from '@apollo/client/react/components'
-
 import {store} from '../Redux/store';
 import { connect } from 'react-redux'
 
@@ -84,7 +81,7 @@ class ProductDetails extends Component {
                                       
                     <hr style={{margin:"20px auto", width:"100%"}}/>
 
-                    <h3>From <b>{data.product.brand}</b></h3>
+                    <h3><b>{data.product.brand}</b></h3>
                     <div dangerouslySetInnerHTML={{__html: data.product.description}}></div>                    
 
                   </div>
@@ -93,7 +90,7 @@ class ProductDetails extends Component {
                     <img src={data.product.gallery[this.state.imageIndex]} alt={data.product.name} height="400" />
                     <br />
                     {data.product.gallery.map((image, index)=>{
-                      return <img src={image} key={image} width="auto" alt="" height="100" onClick={()=>this.handleImage(index)}/>
+                      return <img src={image} key={image} width="auto" alt="prodphoto" height="100" onClick={()=>this.handleImage(index)}/>
                     })}
                   </div>
                   

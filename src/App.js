@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from './Components/Navbar';
-import Home from './Pages/Home';
-import ProductDetails from './Pages/ProductDetails';
+import Home from './Pages/PLP';
+import ProductDetails from './Pages/PDP';
 import Cart from './Pages/Cart';
 
 

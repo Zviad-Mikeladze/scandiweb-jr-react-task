@@ -1,34 +1,37 @@
 @import url(./index.css);
 
 .backdrop{
-    position: fixed;
+    position:absolute;
     top: 0;
     min-height: 100vh;
     width: 100vw;
     z-index: -1;
-    background-color: rgba(0, 0, 0, 0.45);
+   
 }
 
 .minicart{
-    width: 60%;
-    height: 750px;
-    color: black;
-    margin: 10px auto;
+    width: 40%;
+    height: 40%;
+    color: rgb(0, 0, 0);
+    margin: -20px  50% ;
     transform: scale(0.7);
-    background-color: white;
+    background-color: rgb(255,165,0);
     padding: 10px;
     border-radius: 10px;
+    font-size: 20px;
 }
 
 .items{
     margin: 20px auto;
     height: 500px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .showFullCart button{
-    width: 40%;
+    width: 80%;
     height: 50px;
-    margin: 5%;
-    font-size: 50px;
+    margin: 10px 50px;
+    font-size: 20px;
+    text-align: center;
+    
 }

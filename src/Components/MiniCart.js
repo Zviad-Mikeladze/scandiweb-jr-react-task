@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import CartItem from "./CartItem";
-import styles from "../Styles/MiniCart.modules.css";
+import styles from "../Styles/MiniCart.module.css";
 import { Link } from "react-router-dom";
 
 class MiniCart extends Component {
@@ -15,7 +15,7 @@ class MiniCart extends Component {
     const totalPrices = [];
 
     return (
-      <div className={styles.dropdown}>
+      <div className={styles.backdrop}>
         <div className={styles.minicart}>
           <h1 style={{ textAlign: "center" }}>
             {this.props.cartItems.length} Items In Cart
@@ -27,7 +27,7 @@ class MiniCart extends Component {
                 (currency) => currency.currency.label === this.props.currency
               );
               totalPrices.push(
-                Math.ceil(item.quantity * currentCurrencyPrice.amount)
+                Math.round(item.quantity * currentCurrencyPrice.amount)
               );
 
               return (

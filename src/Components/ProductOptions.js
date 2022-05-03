@@ -21,7 +21,7 @@ class ProductOptions extends Component {
         image: this.props.data.gallery[0],
         brand: this.props.data.brand,
         quantity: 1,
-        id: Math.floor(Math.random()*1000),
+        id: Math.round(Math.random()*1000),
         attributes: {}
         }
 
@@ -83,6 +83,8 @@ class ProductOptions extends Component {
 
   render() {
 
+/* Checks if prod is in stock */
+
     if(!this.props.data.inStock){
       return(
         <h2 style={{color:"red", fontSize:"20px", textAlign:"center"}}>
@@ -103,7 +105,7 @@ class ProductOptions extends Component {
               {attribute.items.map((item) => {
                 return (
                   <button 
-                  style={{backgroundColor: 'white', border:"1px solid", minWidth: "40px", height: "30px",
+                  style={{ backgroundColor: item.value, border:"1px solid", borderRadius:"5px", width: "max", height: "max",
                   margin:"8px", padding: "1%"}} 
                   key={item.id} 
                   onClick={() => this.handleChoice(attribute.name, item.id )}
@@ -118,16 +120,16 @@ class ProductOptions extends Component {
           );
         })}
 
-
+{/* */}
         <div>
           
-          <input type="number" max="10" min="1" id="quantity" placeholder='Enter Quantity MAX:10'  style={{width:"50%"}}  onChange={this.handleQuantity}/>
+          <input type="number" max="10" min="1" id="quantity" placeholder='Enter Quantity MAX:10'  style={{width:"280px", height:"20px"}}  onChange={this.handleQuantity}/>
         </div>
         
         {!Object.values(this.state.product.attributes).some(choice=> choice === "") && !this.state.quantityError ?
             (<button onClick={this.handleCart} style={{width:"80%", marginTop:"20px", height:"2em" ,backgroundColor:' rgb(255,165,0)'}}>Add to Cart</button>)
             :
-            (<h6 style={{marginTop:"20px", textAlign:"center", height:"2em"}}>{this.state.addToCartMsg}</h6> )
+            (<h6 style={{marginTop:"20px", textAlign:"left", height:"2em" , fontSize:"25px"}}>{this.state.addToCartMsg}</h6> )
         }
 
       </>

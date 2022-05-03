@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import styles from "../Styles/HomePage.module.css"
+import styles from "../Styles/PLP.module.css"
 import Product from '../Components/Product'
-
 import { graphql } from '@apollo/client/react/hoc';
 import { gql } from "@apollo/client"
-
 import {store} from "../Redux/store"
 
 class Home extends Component {
@@ -30,6 +28,7 @@ class Home extends Component {
   showProducts() {
     if(!this.props.data.loading){
       const categories = this.props.data.categories;
+
       const {products} = categories.find(category => category.name === this.state.category)
 
       return(
@@ -48,7 +47,7 @@ class Home extends Component {
       <div className={styles.container}>
         {this.props.data.categories && (
           <>
-            <h1>{this.state.category.toUpperCase()}</h1>
+            <h1>Category {this.state.category.toUpperCase()}</h1>
 
             <div className={styles.productsList}>{this.showProducts()}</div>
           </>

@@ -12,14 +12,41 @@ class Cart extends Component {
 
     return (
       <div style={{ padding: "10px 10%" }}>
+       
+<h3 style={{fontSize:"40px", textAlign:"center"}} >Your Cart</h3>
+        <div
+          
+        >
+          {this.props.cartItems.map((item) => {
+            const currentCurrencyPrice = item.prices.find(
+              (currency) => currency.currency.label === this.props.currency
+            );
+
+            totalPrices.push(
+             Math.round(item.quantity * currentCurrencyPrice.amount)
+            );
+
+            return (
+              <CartItem key={item.id} price={currentCurrencyPrice} data={item} />
+            );
+          })}
+        </div>
+
+        <div style={{ textAlign: "right", margin: "20px auto" }}>
+
+          <h2>
+            Total Price: {totalPrices.reduce((prev, nxt) => prev + nxt, 0)}{" "}
+            {this.props.currency}
+          </h2>
+        </div>
         <button
           onClick={this.clearCart}
           style={{
             margin: "20px auto",
             padding: "1%",
             display: "block",
-            height: "max-content",
-            width: "max-content",
+            height: "60px",
+            width: "200px",
             borderRadius: "10px",
             fontWeight: "bold",
             fontSize: "2rem",
@@ -31,33 +58,6 @@ class Cart extends Component {
         >
           Clear Cart
         </button>
-
-        <div
-          style={{ height: "50vh", overflowX: "hidden", overflowY: "scroll" }}
-        >
-          {this.props.cartItems.map((item) => {
-            const currentCurrencyPrice = item.prices.find(
-              (currency) => currency.currency.label === this.props.currency
-            );
-
-            totalPrices.push(
-              Math.ceil(item.quantity * currentCurrencyPrice.amount)
-            );
-
-            return (
-              <CartItem key={item.id} price={currentCurrencyPrice} data={item} />
-            );
-          })}
-        </div>
-
-        <div style={{ textAlign: "center", margin: "20px auto" }}>
-          <h2>{this.props.cartItems.length} Items</h2>
-
-          <h2>
-            Total Price: {totalPrices.reduce((prev, nxt) => prev + nxt, 0)}{" "}
-            {this.props.currency}
-          </h2>
-        </div>
       </div>
     );
   }

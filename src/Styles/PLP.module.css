@@ -12,16 +12,16 @@
 
 .productsList{
     display: grid;
+    height: max-content;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     align-items: center;
-    height: max-content;
 }
 
 @media only screen and (max-width: 800px) {
     .productsList{
         display: grid;
-        grid-template-columns: 1fr;
         gap: 10px;
+        grid-template-columns: 1fr;
     }
   }

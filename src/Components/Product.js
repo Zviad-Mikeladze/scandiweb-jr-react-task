@@ -29,35 +29,39 @@ class Product extends Component {
     return (
       <div className={styles.container}>
 
+ <h3 style={{textAlign:'center'}} > {this.props.data.inStock ? <p>In Stock</p> : <p style={{color:"red"}} >Out Of Stock</p>}</h3>
+
 {/* Links to product page with data.id */}
 
-        <Link to={`/product/${this.props.data.id}`}>
+        <Link to={`/product/${this.props.data.id}` }  >
           <img
             src={this.props.data.gallery[0]}
-            height="200px"
+            height="300px"
             width="auto"
             alt={this.props.data.name}
             className={styles.productImg}
             onClick={()=>this.props.changeProductID(this.props.data.id)}
           />
+        
         </Link>
-
         <div className={styles.details}>
-
             <h4>{this.props.data.name}</h4>
 
             <h5>
               {currentCurrencyPrice.currency.symbol}
               {currentCurrencyPrice.amount}
             </h5>
+            
+
 
             <hr />
 
            
 
         </div>
-
+        
       </div>
+      
     );
   }
 }

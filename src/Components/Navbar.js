@@ -106,7 +106,7 @@ class Navbar extends Component {
           </button>
         </div>
 
-        {this.state.isMiniCartOpen && <MiniCart />}
+        {this.state.isMiniCartOpen && <MiniCart  />}
       </nav>
     );
   }

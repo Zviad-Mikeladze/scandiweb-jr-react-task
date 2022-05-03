@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { store } from "../Redux/store";
-import styles from "../Styles/CartItem.modules.css";
+import styles from "../Styles/CartItem.module.css";
 
 
 class CartItem extends Component {
@@ -67,38 +67,46 @@ class CartItem extends Component {
 
           <h4>
             Total Price:{" "}
-            {Math.floor(this.props.data.quantity * this.props.price.amount)}
+            {Math.round(this.props.data.quantity * this.props.price.amount)}
             {this.props.price.currency.symbol}
           </h4>
         </div>
 
         <div className={styles.productShowCase}>
-          <div className={styles.productQuantity}>
-            <button onClick={this.increment}>+</button>
-            <b>{this.state.quantity}</b>
-            <button onClick={this.decrement}>-</button>
-          </div>
+          
 
           <img
             src={this.props.data.image}
             width="150"
             height="auto"
-            alt="prod"
+            alt="prodphoto"
+           
           />
+          <div>
+
+          <span className={styles.productQuantity}>
+            <button onClick={this.increment}>+</button>
+            <b>{this.state.quantity}</b>
+            <button onClick={this.decrement}>-</button>
+          </span>
+
           <button
             onClick={this.removeItem}
             style={{
-              padding: "1%",
-              borderRadius: "5px",
+              height: "80px",
+              width: "120px",
+              padding: "20px",
+              borderRadius: "15px",
               fontWeight: "bold",
               fontSize: "1rem",
-              backgroundColor: "red",
-              border: "none",
-              color: "white",
+              backgroundColor: "white",
+              border: "1px solid red",
+              color: "red",
             }}
           >
-           Remove from cart
+           Remove From Cart
           </button>
+          </div>
         </div>
       </div>
     );
