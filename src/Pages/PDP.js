@@ -62,7 +62,7 @@ class ProductDetails extends Component {
       <Query query={GET_DATA}>
         {({data, loading, error})=>{
             
-          if (error) return <h1>An Error Occured.</h1>
+          if (error) return <h1>Error</h1>
 
           if (loading) return <h1>Loading...</h1>
               
@@ -80,8 +80,9 @@ class ProductDetails extends Component {
                     <ProductOptions data={data.product} />
                                       
                     <hr style={{margin:"20px auto", width:"100%"}}/>
-
-                    <h3><b>{data.product.brand}</b></h3>
+                    
+                   <h3 ><b> Brand: {data.product.brand}</b></h3>
+                   <div style={{paddingBottom:"10px" ,paddingTop:"10px", fontSize:"20px"}}> <h5>Product Description:</h5></div>
                     <div dangerouslySetInnerHTML={{__html: data.product.description}}></div>                    
 
                   </div>

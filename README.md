@@ -1,12 +1,11 @@
-# Entry React developer task for ScandiWeb
 
-## My task submission for the junior React developer position at ScandiWeb
 
-## Made with:
+Zviad Mikeladze
+
+
 
 css modules stylesheet
 when clear cart error
-
-1. React (With class components)
-2. React Redux
-3. Apollo Client
+ React (With class components)
+ React Redux
+ Apollo Client
