@@ -6,7 +6,7 @@ import { Query } from '@apollo/client/react/components'
 import {store} from '../Redux/store';
 import { connect } from 'react-redux'
 
-class ProductDetails extends Component {
+class PDP extends Component {
   constructor(props){
     super(props)
     this.state ={
@@ -107,4 +107,4 @@ class ProductDetails extends Component {
 
 
 
-export default connect(null)(ProductDetails);
+export default connect(null)(PDP);

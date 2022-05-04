@@ -5,7 +5,7 @@ import { graphql } from '@apollo/client/react/hoc';
 import { gql } from "@apollo/client"
 import {store} from "../Redux/store"
 
-class Home extends Component {
+class PLP extends Component {
 
   constructor(props){
     super(props)
@@ -86,4 +86,4 @@ const GET_DATA = gql`{
   }
 }`
 
-export default graphql(GET_DATA)(Home);
+export default graphql(GET_DATA)(PLP);

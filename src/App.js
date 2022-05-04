@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from './Components/Navbar';
-import Home from './Pages/PLP';
-import ProductDetails from './Pages/PDP';
+import PLP from './Pages/PLP';
+import PDP from './Pages/PDP';
 import Cart from './Pages/Cart';
 
 
@@ -16,9 +16,9 @@ class App extends Component {
         <Navbar/>
 
         <Routes>
-          <Route path='/' element={<Home/>}/>
+          <Route path='/' element={<PLP/>}/>
           <Route path='/cart' element={<Cart/>}/>
-          <Route path='/product/:id' element={<ProductDetails/>}/>
+          <Route path='/product/:id' element={<PDP/>}/>
         </Routes>
         
       </Router>
