@@ -16,9 +16,9 @@ class App extends Component {
         <Navbar/>
 
         <Routes>
-          <Route path='/' element={<PLP/>}/>
+          <Route path='/' element={<PLP/>}/> {/*product listing page */}
           <Route path='/cart' element={<Cart/>}/>
-          <Route path='/product/:id' element={<PDP/>}/>
+          <Route path='/product/:id' element={<PDP/>}/> {/*product details page */}
         </Routes>
         
       </Router>

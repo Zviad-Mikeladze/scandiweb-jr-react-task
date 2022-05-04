@@ -95,6 +95,7 @@ class ProductOptions extends Component {
       
     return (
       <>
+      {/*atributes */}
         {this.props.data.attributes.map((attribute) => {
           return (
             <div key={attribute.name}>
@@ -104,6 +105,7 @@ class ProductOptions extends Component {
                 <br />
               {attribute.items.map((item) => {
                 return (
+                  /*colore buttons */
                   <button 
                   style={{ backgroundColor: item.value, border:"1px solid", borderRadius:"5px", width: "max", height: "max",
                   margin:"8px", padding: "1%"}} 
@@ -120,7 +122,7 @@ class ProductOptions extends Component {
           );
         })}
 
-{/* */}
+{/* input quantity */}
         <div>
           
           <input type="number" max="10" min="1" id="quantity" placeholder='Enter Quantity MAX:10'  style={{width:"280px", height:"20px"}}  onChange={this.handleQuantity}/>

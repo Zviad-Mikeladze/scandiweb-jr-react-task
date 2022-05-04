@@ -14,9 +14,8 @@ class Cart extends Component {
       <div style={{ padding: "10px 10%" }}>
        
 <h3 style={{fontSize:"40px", textAlign:"center"}} >Your Cart</h3>
-        <div
-          
-        >
+        <div>
+{/* cart item price atribute quantity */}
           {this.props.cartItems.map((item) => {
             const currentCurrencyPrice = item.prices.find(
               (currency) => currency.currency.label === this.props.currency
@@ -39,6 +38,7 @@ class Cart extends Component {
             {this.props.currency}
           </h2>
         </div>
+        {/*cleare cart red button */}
         <button
           onClick={this.clearCart}
           style={{

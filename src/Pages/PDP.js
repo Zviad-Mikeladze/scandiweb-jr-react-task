@@ -72,6 +72,7 @@ class PDP extends Component {
                 <div className={styles.container}>
   
                   <div className={styles.productInfo}>
+                    {/*product name details price */}
                     <h1>{data.product.name}</h1>
                     <h2>Price: {currentCurrencyPrice.currency.symbol}{currentCurrencyPrice.amount}</h2>  
                     
@@ -80,13 +81,13 @@ class PDP extends Component {
                     <ProductOptions data={data.product} />
                                       
                     <hr />
-                    
+                    {/*brand and description */}
                    <h3 ><b> Brand: {data.product.brand}</b></h3>
                    <div style={{paddingBottom:"10px" ,paddingTop:"10px", fontSize:"20px"}}> <h5>Product Description:</h5></div>
                     <div dangerouslySetInnerHTML={{__html: data.product.description}}></div>                    
 
                   </div>
-  
+  {/*maps in product photos index */}
                   <div className={styles.productImages}>
                     <img src={data.product.gallery[this.state.imageIndex]} alt={data.product.name} height="400" />
                     <br />

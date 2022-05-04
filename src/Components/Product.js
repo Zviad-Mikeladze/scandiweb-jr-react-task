@@ -28,7 +28,7 @@ class Product extends Component {
     const currentCurrencyPrice = this.props.data.prices.find(currency=> currency.currency.label === this.state.currency)
     return (
       <div className={styles.container}>
-
+{/* in stock text */}
  <h3 style={{textAlign:'center'}} > {this.props.data.inStock ? <p>In Stock</p> : <p style={{color:"red"}} >Out Of Stock</p>}</h3>
 
 {/* Links to product page with data.id */}
@@ -44,6 +44,7 @@ class Product extends Component {
           />
         
         </Link>
+        {/*name price symbol */}
         <div className={styles.details}>
             <h4>{this.props.data.name}</h4>
 

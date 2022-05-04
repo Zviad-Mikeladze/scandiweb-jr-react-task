@@ -1,12 +1,11 @@
+# Made by Zviad Mikeladze for Scandiweb Junior React Developer Task
 
+# React (Router , Class Components , Icons)
 
-Zviad Mikeladze
+# React Redux
 
+# Apollo Client
 
+# Css Modules Stylesheet
 
-css modules stylesheet
-when clear cart error
-
- React (With class components)
- React Redux
- Apollo Client
+# To run page on local host: run endpoint-master , install dependencies , build and start.

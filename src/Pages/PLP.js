@@ -44,6 +44,7 @@ class PLP extends Component {
 
   render() {
     return (
+      /* category name and product container */
       <div className={styles.container}>
         {this.props.data.categories && (
           <>

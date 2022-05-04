@@ -46,10 +46,11 @@ class Navbar extends Component {
   render() {
     return (
       <nav className={styles.navbar}>
+        {/* links home button to PLP page*/}
         <Link to="/">
           < HiHome  color="orange" size="50px" />
         </Link>
-
+{/* category change */}
         <div className={styles.categories}>
           <span
             className={styles.category}
@@ -70,7 +71,7 @@ class Navbar extends Component {
             Clothes
           </span>
         </div>
-
+{/* currency change selector */}
         <div className={styles.misc}>
           <select
             className={styles.currency}
@@ -93,7 +94,7 @@ class Navbar extends Component {
               RUB
             </option>
           </select>
-
+{/*icon opens mini cart */}
           <button
             onClick={this.showMiniCart}
             aria-label="show shopping cart button"
