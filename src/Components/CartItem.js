@@ -28,7 +28,7 @@ class CartItem extends Component {
   componentWillUnmount() {
     this.unsub();
   }
-
+/* increm decrem and remove items */ 
   increment = () => {
     this.props.incrementQunatity(this.props.data.id);
   };
@@ -89,7 +89,7 @@ class CartItem extends Component {
             <b>{this.state.quantity}</b>
             <button onClick={this.decrement}>-</button>
           </span>
-
+{/*remove button*/}
           <button
             onClick={this.removeItem}
             style={{

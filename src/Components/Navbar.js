@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
 import styles from "../Styles/Navbar.module.css";
 import {GrCart} from 'react-icons/gr'
 import {HiHome} from 'react-icons/hi'
-
 import { connect } from "react-redux";
 import { store } from "../Redux/store";
 import MiniCart from "./MiniCart";

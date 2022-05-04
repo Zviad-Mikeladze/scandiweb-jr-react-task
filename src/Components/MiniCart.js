@@ -46,6 +46,7 @@ class MiniCart extends Component {
           </h2>
 
           <div className={styles.showFullCart}>
+            {/* button links to cart page */}
             <Link to="/cart">
               <button>Show Cart</button>
             </Link>
@@ -64,7 +65,7 @@ const mapStateToProps = (state) => {
     currency: state.currency,
   };
 };
-
+/*dispatches item atribute updates*/
 const mapDispatchToProps = (dispatch) => {
   return {
     changeProductOptions: (productOption) =>
